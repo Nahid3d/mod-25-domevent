@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js dom event</title>
+</head>
+<body>
+    <p id="input-text">defult text</p>
+    <input id="input-fild" type="text">
+    <button id="button-update">update</button>
+
+    <br><br><br>
+    <h1> js dom handals event</h1>
+    <h4 id="oneclick">
+        defult text 
+    </h4>
+    <p id="hello">hello world</p>
+    <button onclick="onClickMagic()">on click by event</button>
+
+    <button onclick="clickNow()">click me</button>
+
+
+    <script>
+        function onClickMagic(){
+          const onclick = document.getElementById('oneclick');
+          oneclick.innerText= 'ha ha on click magic on'  
+        }
+
+        function clickNow(){
+            const hello = document.getElementById('hello');
+            hello.innerText=
+            'ami akdin akjon valo manush hobe inssallah ar manush k help korbo ...'
+        }
+        document.getElementById('button-update').addEventListener('click', function(){
+            const inBox =document.getElementById('input-fild');
+            const inputtext = inBox.value;
+
+            const para =document.getElementById('input-text');
+            para.innerText =inputtext;
+            inBox.value= '';
+        })
+    </script>
+</body>
+</html>

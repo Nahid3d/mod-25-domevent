@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input magic</title>  
+</head>
+<body>
+    <h3 id="text">hello nahid</h3>
+    <input id="input-filde" type="text">
+    <button id="update-btn">Updatte</button>
+
+
+    <div id="text-container">
+
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium quia labore molestiae incidunt sapiente aspernatur, deserunt dolore cum iusto libero facere? Molestiae dicta ipsam corporis dolorem dolorum deserunt eligendi pariatur eum consequatur ad aliquid atque itaque, sapiente fugiat natus mollitia totam fuga minus doloremque commodi! Vitae nostrum vel rem doloremque!</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium quia labore molestiae incidunt sapiente aspernatur, deserunt dolore cum iusto libero facere? Molestiae dicta ipsam corporis dolorem dolorum deserunt eligendi pariatur eum consequatur ad aliquid atque itaque, sapiente fugiat natus mollitia totam fuga minus doloremque commodi! Vitae nostrum vel rem doloremque!</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium quia labore molestiae incidunt sapiente aspernatur, deserunt dolore cum iusto libero facere? Molestiae dicta ipsam corporis dolorem dolorum deserunt eligendi pariatur eum consequatur ad aliquid atque itaque, sapiente fugiat natus mollitia totam fuga minus doloremque commodi! Vitae nostrum vel rem doloremque!</p>
+      
+  
+    <textarea name="" id="area" cols="60" rows="4"></textarea>
+    <button id="update-post">Post</button>
+
+
+    </div>
+
+
+    <script>
+        document.getElementById('update-btn').addEventListener('click', function(){
+            const inBox =document.getElementById('input-filde');
+            const inputtext = inBox.value;
+
+            const para =document.getElementById('text')
+            para.text = inputtext;
+            inBox.value= '';
+        })
+                //    step one 
+        document.getElementById('update-post').addEventListener('click', function(){
+            // step two 
+            const textarea =document.getElementById('area');
+            const newtext = textarea.value;
+        //    step three 
+            const containe =document.getElementById('text-container');
+            const p =document.createElement('p');
+            p.innerText = newtext;
+            containe.appendChild(p);
+
+            textarea.value = '';
+        })
+    </script>
+</body>
+</html>
